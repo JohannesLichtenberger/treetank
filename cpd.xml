@@ -1,3 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+<duplication lines="89" tokens="123">
+<file line="100" path="/Users/sebi/Dropbox/github/treetank/coremodules/core/src/main/java/org/treetank/node/NamespaceNode.java"/>
+<file line="100" path="/Users/sebi/Dropbox/github/treetank/coremodules/core/src/main/java/org/treetank/node/TextNode.java"/>
+<codefragment>
+<![CDATA[
+        mNameDel.setURIKey(pUriKey);
+    }
+
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void acceptVisitor(final IVisitor pVisitor) {
+        pVisitor.visit(this);
+    }
+
+    /**
+     * Delegate method for setHash.
+     * 
+     * @param pHash
+     * @see org.treetank.node.delegates.NodeDelegate#setHash(long)
+     */
+    public void setHash(final long pHash) {
+        mDel.setHash(pHash);
+    }
+
+    /**
+     * Delegate method for getHash.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#getHash()
+     */
+    public long getHash() {
+        return mDel.getHash();
+    }
+
+    /**
+     * Delegate method for setNodeKey.
+     * 
+     * @param pNodeKey
+     * @see org.treetank.node.delegates.NodeDelegate#setNodeKey(long)
+     */
+    public void setNodeKey(final long pNodeKey) {
+        mDel.setNodeKey(pNodeKey);
+    }
+
+    /**
+     * Delegate method for getNodeKey.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#getNodeKey()
+     */
+    public long getNodeKey() {
+        return mDel.getNodeKey();
+    }
+
+    /**
+     * Delegate method for getParentKey.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#getParentKey()
+     */
+    public long getParentKey() {
+        return mDel.getParentKey();
+    }
+
+    /**
+     * Delegate method for hasParent.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#hasParent()
+     */
+    public boolean hasParent() {
+        return mDel.hasParent();
+    }
+
+    /**
+     * Delegate method for getTypeKey.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#getTypeKey()
+     */
+    public int getTypeKey() {
+        return mDel.getTypeKey();
+    }
+
+    /**
+     * Delegate method for setParentKey.
+     * 
+     * @param pKey
+     * @see org.treetank.node.delegates.NodeDelegate#setParentKey(long)
+     */
+    public void setParentKey(final long pKey) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="64" tokens="120">
+<file line="58" path="/Users/sebi/Dropbox/github/treetank/coremodules/core/src/main/java/org/treetank/access/conf/DatabaseConfiguration.java"/>
+<file line="62" path="/Users/sebi/Dropbox/github/treetank/coremodules/core/src/main/java/org/treetank/access/conf/ResourceConfiguration.java"/>
+<codefragment>
+<![CDATA[
+        Data(new File("resources"), true);
+
+        /** Location of the file. */
+        private final File mFile;
+
+        /** Is the location a folder or no? */
+        private final boolean mIsFolder;
+
+        /**
+         * Constructor.
+         * 
+         * @param pFile
+         *            to be set
+         * @param pIsFolder
+         *            to be set.
+         */
+        private Paths(final File pFile, final boolean pIsFolder) {
+            this.mFile = pFile;
+            this.mIsFolder = pIsFolder;
+        }
+
+        /**
+         * Getting the file for the kind.
+         * 
+         * @return the file to the kind
+         */
+        public File getFile() {
+            return mFile;
+        }
+
+        /**
+         * Check if file is denoted as folder or not.
+         * 
+         * @return boolean if file is folder
+         */
+        public boolean isFolder() {
+            return mIsFolder;
+        }
+
+        /**
+         * Checking a structure in a folder to be equal with the data in this
+         * enum.
+         * 
+         * @param pFile
+         *            to be checked
+         * @return -1 if less folders are there, 0 if the structure is equal to
+         *         the one expected, 1 if the structure has more folders
+         */
+        public static int compareStructure(final File pFile) {
+            int existing = 0;
+            for (final Paths paths : values()) {
+                final File currentFile = new File(pFile, paths.getFile().getName());
+                if (currentFile.exists()) {
+                    existing++;
+                }
+            }
+            return existing - values().length;
+        }
+
+    }
+
+    // STATIC STANDARD FIELDS
+    /** Identification for string. */
+    public static final String BINARY = "5.4.0";
+]]>
+</codefragment>
+</duplication>
 </pmd-cpd>

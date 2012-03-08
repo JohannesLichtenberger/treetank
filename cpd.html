@@ -35,7 +35,7 @@
                 
         
                   <li id="publishDate">Last Published: 2012-03-08</li>
-                  <li class="divider">|</li> <li id="projectVersion">Version: 1.0.1-SNAPSHOT</li>
+                  <li class="divider">|</li> <li id="projectVersion">Version: 6.0.0-SNAPSHOT</li>
                           <li class="divider">|</li>             <li class="">
                     <a href="http://www.treetank.org" class="externalLink" title="Treetank">Treetank</a>
         <li class="divider ">/</li>
@@ -50,17 +50,20 @@
         <div class="well">
                 
         
-                                   <h5>Commons</h5>
+                                   <h5>core</h5>
                   <ul>
                   <li class="none">
-                          <a href="index.html" title="About Commons">About Commons</a>
+                          <a href="index.html" title="About Core">About Core</a>
             </li>
           </ul>
                        <h5>Project Documentation</h5>
                   <ul>
-                                                                                                                                                                                          <li class="expanded">
+                                                                                                                                                                                                                              <li class="expanded">
                           <a href="project-reports.html" title="Project Reports">Project Reports</a>
                     <ul>
+                      <li class="none">
+                          <a href="testapidocs/index.html" title="Test JavaDocs">Test JavaDocs</a>
+            </li>
                       <li class="none">
                           <a href="apidocs/index.html" title="JavaDocs">JavaDocs</a>
             </li>
@@ -72,6 +75,9 @@
             </li>
                       <li class="none">
                           <a href="surefire-report.html" title="Surefire Report">Surefire Report</a>
+            </li>
+                      <li class="none">
+                          <a href="xref-test/index.html" title="Test Source Xref">Test Source Xref</a>
             </li>
                       <li class="none">
                           <a href="xref/index.html" title="Source Xref">Source Xref</a>
@@ -100,7 +106,158 @@
       <div id="bodyColumn" class="content">
         <div id="contentBox">
                               
-          <div class="section"><h2>CPD Results<a name="CPD_Results"></a></h2><p>The following document contains the results of PMD's  <a class="externalLink" href="http://pmd.sourceforge.net/cpd.html">CPD</a> 4.3.</p></div><div class="section"><h2>Duplications<a name="Duplications"></a></h2><p>CPD found no problems in your source code.</p></div>
+          <div class="section"><h2>CPD Results<a name="CPD_Results"></a></h2><p>The following document contains the results of PMD's  <a class="externalLink" href="http://pmd.sourceforge.net/cpd.html">CPD</a> 4.3.</p></div><div class="section"><h2>Duplications<a name="Duplications"></a></h2><table border="0" class="zebra-striped"><tr class="a"><th>File</th><th>Line</th></tr><tr class="b"><td>org/treetank/node/NamespaceNode.java</td><td><a href="./xref/org/treetank/node/NamespaceNode.html#100">100</a></td></tr><tr class="a"><td>org/treetank/node/TextNode.java</td><td><a href="./xref/org/treetank/node/TextNode.html#100">100</a></td></tr><tr class="b"><td colspan='2'><div><pre>        mNameDel.setURIKey(pUriKey);
+    }
+
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void acceptVisitor(final IVisitor pVisitor) {
+        pVisitor.visit(this);
+    }
+
+    /**
+     * Delegate method for setHash.
+     * 
+     * @param pHash
+     * @see org.treetank.node.delegates.NodeDelegate#setHash(long)
+     */
+    public void setHash(final long pHash) {
+        mDel.setHash(pHash);
+    }
+
+    /**
+     * Delegate method for getHash.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#getHash()
+     */
+    public long getHash() {
+        return mDel.getHash();
+    }
+
+    /**
+     * Delegate method for setNodeKey.
+     * 
+     * @param pNodeKey
+     * @see org.treetank.node.delegates.NodeDelegate#setNodeKey(long)
+     */
+    public void setNodeKey(final long pNodeKey) {
+        mDel.setNodeKey(pNodeKey);
+    }
+
+    /**
+     * Delegate method for getNodeKey.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#getNodeKey()
+     */
+    public long getNodeKey() {
+        return mDel.getNodeKey();
+    }
+
+    /**
+     * Delegate method for getParentKey.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#getParentKey()
+     */
+    public long getParentKey() {
+        return mDel.getParentKey();
+    }
+
+    /**
+     * Delegate method for hasParent.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#hasParent()
+     */
+    public boolean hasParent() {
+        return mDel.hasParent();
+    }
+
+    /**
+     * Delegate method for getTypeKey.
+     * 
+     * @return
+     * @see org.treetank.node.delegates.NodeDelegate#getTypeKey()
+     */
+    public int getTypeKey() {
+        return mDel.getTypeKey();
+    }
+
+    /**
+     * Delegate method for setParentKey.
+     * 
+     * @param pKey
+     * @see org.treetank.node.delegates.NodeDelegate#setParentKey(long)
+     */
+    public void setParentKey(final long pKey) {</pre></div></td></tr></table><table border="0" class="zebra-striped"><tr class="a"><th>File</th><th>Line</th></tr><tr class="b"><td>org/treetank/access/conf/DatabaseConfiguration.java</td><td><a href="./xref/org/treetank/access/conf/DatabaseConfiguration.html#58">58</a></td></tr><tr class="a"><td>org/treetank/access/conf/ResourceConfiguration.java</td><td><a href="./xref/org/treetank/access/conf/ResourceConfiguration.html#62">62</a></td></tr><tr class="b"><td colspan='2'><div><pre>        Data(new File(&quot;resources&quot;), true);
+
+        /** Location of the file. */
+        private final File mFile;
+
+        /** Is the location a folder or no? */
+        private final boolean mIsFolder;
+
+        /**
+         * Constructor.
+         * 
+         * @param pFile
+         *            to be set
+         * @param pIsFolder
+         *            to be set.
+         */
+        private Paths(final File pFile, final boolean pIsFolder) {
+            this.mFile = pFile;
+            this.mIsFolder = pIsFolder;
+        }
+
+        /**
+         * Getting the file for the kind.
+         * 
+         * @return the file to the kind
+         */
+        public File getFile() {
+            return mFile;
+        }
+
+        /**
+         * Check if file is denoted as folder or not.
+         * 
+         * @return boolean if file is folder
+         */
+        public boolean isFolder() {
+            return mIsFolder;
+        }
+
+        /**
+         * Checking a structure in a folder to be equal with the data in this
+         * enum.
+         * 
+         * @param pFile
+         *            to be checked
+         * @return -1 if less folders are there, 0 if the structure is equal to
+         *         the one expected, 1 if the structure has more folders
+         */
+        public static int compareStructure(final File pFile) {
+            int existing = 0;
+            for (final Paths paths : values()) {
+                final File currentFile = new File(pFile, paths.getFile().getName());
+                if (currentFile.exists()) {
+                    existing++;
+                }
+            }
+            return existing - values().length;
+        }
+
+    }
+
+    // STATIC STANDARD FIELDS
+    /** Identification for string. */
+    public static final String BINARY = &quot;5.4.0&quot;;</pre></div></td></tr></table></div>
                   </div>
       </div>
     </div>
