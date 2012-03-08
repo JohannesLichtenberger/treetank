@@ -1,14 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.3" timestamp="2012-03-08T21:21:52.496">
-<file name="/Users/sebi/Dropbox/github/treetank/coremodules/core/src/main/java/org/treetank/page/interfaces/IReferencePage.java">
-<violation beginline="32" endline="32" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Import Statement Rules" package="org.treetank.page.interfaces" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'org.treetank.access.WriteTransactionState'
-</violation>
-<violation beginline="33" endline="33" begincolumn="1" endcolumn="45" rule="UnusedImports" ruleset="Import Statement Rules" package="org.treetank.page.interfaces" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'org.treetank.exception.AbsTTException'
-</violation>
-<violation beginline="34" endline="34" begincolumn="1" endcolumn="39" rule="UnusedImports" ruleset="Import Statement Rules" package="org.treetank.page.interfaces" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'org.treetank.page.PageReference'
-</violation>
-</file>
+<pmd version="4.3" timestamp="2012-03-08T21:22:40.468">
 </pmd>
