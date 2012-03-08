@@ -1,2 +1,10 @@
-org.treetank.saxon.evaluator
-org.treetank.saxon.wrapper
+org.treetank.service.xml.xpath
+org.treetank.service.xml.xpath.comparators
+org.treetank.service.xml.xpath.concurrent
+org.treetank.service.xml.xpath.expr
+org.treetank.service.xml.xpath.filter
+org.treetank.service.xml.xpath.functions
+org.treetank.service.xml.xpath.functions.sequences
+org.treetank.service.xml.xpath.operators
+org.treetank.service.xml.xpath.parser
+org.treetank.service.xml.xpath.types
